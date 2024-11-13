@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA6BD479-C03B-4883-929D-4E9C75576351}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Clave3_Grupo4</RootNamespace>
+    <AssemblyName>Clave3_Grupo4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Clave3_Grupo4.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clases\D_Clientes.cs" />
+    <Compile Include="clases\D_Cuentas.cs" />
+    <Compile Include="clases\D_MovimientoAbono.cs" />
+    <Compile Include="clases\D_MovimientoCuenta.cs" />
+    <Compile Include="clases\D_MovimientoTarjeta.cs" />
+    <Compile Include="clases\D_Prestamos.cs" />
+    <Compile Include="clases\D_Tarjetas.cs" />
+    <Compile Include="clases\D_TipoClientes.cs" />
+    <Compile Include="clases\D_TipoCuentas.cs" />
+    <Compile Include="clases\D_TipoPagos.cs" />
+    <Compile Include="clases\D_TipoPrestamo.cs" />
+    <Compile Include="clases\D_TipoTarjetas.cs" />
+    <Compile Include="clases\E_Clientes.cs" />
+    <Compile Include="clases\E_Cuentas.cs" />
+    <Compile Include="clases\E_MovimientoAbono.cs" />
+    <Compile Include="clases\E_MovimientoCuenta.cs" />
+    <Compile Include="clases\E_MovimientoTarjeta.cs" />
+    <Compile Include="clases\E_Prestamos.cs" />
+    <Compile Include="clases\E_Tarjetas.cs" />
+    <Compile Include="clases\E_TipoClientes.cs" />
+    <Compile Include="clases\E_TipoCuentas.cs" />
+    <Compile Include="clases\E_TipoPagos.cs" />
+    <Compile Include="clases\E_TipoPrestamo.cs" />
+    <Compile Include="clases\E_TipoTarjetas.cs" />
+    <Compile Include="clases\N_Clientes.cs" />
+    <Compile Include="clases\N_Cuentas.cs" />
+    <Compile Include="clases\N_MovimientoAbono.cs" />
+    <Compile Include="clases\N_MovimientoCuenta.cs" />
+    <Compile Include="clases\N_MovimientoTarjeta.cs" />
+    <Compile Include="clases\N_Prestamos.cs" />
+    <Compile Include="clases\N_Tarjetas.cs" />
+    <Compile Include="clases\N_TipoClientes.cs" />
+    <Compile Include="clases\N_TipoCuentas.cs" />
+    <Compile Include="clases\N_TipoPagos.cs" />
+    <Compile Include="clases\N_TipoPrestamo.cs" />
+    <Compile Include="clases\N_TipoTarjetas.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Frm_Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Cuentas.Designer.cs">
+      <DependentUpon>Frm_Cuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Dashboard.designer.cs">
+      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DetalleCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DetalleCliente.Designer.cs">
+      <DependentUpon>Frm_DetalleCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DetallePrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DetallePrestamos.Designer.cs">
+      <DependentUpon>Frm_DetallePrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MovimientoAbono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MovimientoAbono.Designer.cs">
+      <DependentUpon>Frm_MovimientoAbono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MovimientoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MovimientoCuenta.Designer.cs">
+      <DependentUpon>Frm_MovimientoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MovimientoTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MovimientoTarjeta.Designer.cs">
+      <DependentUpon>Frm_MovimientoTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TarjetasCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TarjetasCredito.Designer.cs">
+      <DependentUpon>Frm_TarjetasCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TipoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TipoCliente.Designer.cs">
+      <DependentUpon>Frm_TipoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TipoCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TipoCuentas.Designer.cs">
+      <DependentUpon>Frm_TipoCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TipoPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TipoPagos.Designer.cs">
+      <DependentUpon>Frm_TipoPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TipoPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TipoPrestamos.Designer.cs">
+      <DependentUpon>Frm_TipoPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_TiposTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TiposTarjetas.Designer.cs">
+      <DependentUpon>Frm_TiposTarjetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_UsuarioSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_UsuarioSistema.designer.cs">
+      <DependentUpon>Frm_UsuarioSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Cuentas.resx">
+      <DependentUpon>Frm_Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Dashboard.resx">
+      <DependentUpon>Frm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DetalleCliente.resx">
+      <DependentUpon>Frm_DetalleCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DetallePrestamos.resx">
+      <DependentUpon>Frm_DetallePrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MovimientoAbono.resx">
+      <DependentUpon>Frm_MovimientoAbono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MovimientoCuenta.resx">
+      <DependentUpon>Frm_MovimientoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MovimientoTarjeta.resx">
+      <DependentUpon>Frm_MovimientoTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TarjetasCredito.resx">
+      <DependentUpon>Frm_TarjetasCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TipoCliente.resx">
+      <DependentUpon>Frm_TipoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TipoCuentas.resx">
+      <DependentUpon>Frm_TipoCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TipoPagos.resx">
+      <DependentUpon>Frm_TipoPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TipoPrestamos.resx">
+      <DependentUpon>Frm_TipoPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TiposTarjetas.resx">
+      <DependentUpon>Frm_TiposTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_UsuarioSistema.resx">
+      <DependentUpon>Frm_UsuarioSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mysql\Untitled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mysql\logo_digipack_2x.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tarjeta-de-empleado-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base-de-datos- bak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deshacer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idea 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-CBNK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-CBNK2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa-3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validando-billete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-CBNK2 - copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar-archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logob1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logob2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
